@@ -1,10 +1,12 @@
-export default function MainButton() {
-    const gio = 'hello'
 
+export default function MainButton({content, className}) {
+
+
+    const buttonClassName = "rounded-xl px-14 py-2 uppercase text-white font-bold " + className
 
     return (
-        <div className="text-3xl font-bold underline text-amber-950">
-            {gio}
-        </div>
+        <button className={buttonClassName}>
+            {content}
+        </button>
     )
 }

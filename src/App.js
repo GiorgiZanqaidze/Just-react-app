@@ -1,9 +1,14 @@
-import './App.css';
-import MainButton from "./Components/MainButton";
+import ListItem from "./Components/ListItem";
 function App() {
+
+    let items = ['item1', 'item-2']
+
+
   return (
-    <div className="App">
-     <MainButton />
+    <div>
+        {items.map((item, index) => {
+            return <ListItem content={item}/>
+        })}
     </div>
   );
 }
