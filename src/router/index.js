@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <HomePage/>,
     },
     {
-        path: "/list",
+        path: "/users/:id",
         element: <ListPage/>,
     },
 ]);
