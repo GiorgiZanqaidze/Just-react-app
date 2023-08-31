@@ -13,10 +13,16 @@ export default function ListPage () {
 
     useEffect(() => {
 
-        axios.get(`${baseApi}${location.pathname}`).then(res => setUser(res.data)).catch(err => console.log(err))
+        axios.get(`${baseApi}/users${location.pathname}`).then(res => setUser(res.data)).catch(err => console.log(err))
 
     }, [])
+
+    console.log(user)
     return (
-        <p>{user && user.login}</p>
+        <div>
+            <p>{user && user.login}</p>
+            <img src={user && user.avatar_url} alt='user'/>
+            <p>{user.name}</p>
+        </div>
     )
 }
